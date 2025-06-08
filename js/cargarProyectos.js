@@ -1,4 +1,3 @@
-//Cargar proyectos desde proyectos.xml y generar tarjetas dinámicamente
 fetch('proyectos.xml')
   .then(response => response.text())
   .then(data => {
@@ -14,19 +13,20 @@ fetch('proyectos.xml')
       const link = proyecto.getElementsByTagName("link")[0].textContent;
       const estado = proyecto.getElementsByTagName("estado")[0]?.textContent || "";
 
-      // Crear tarjetas
       const tarjeta = document.createElement("article");
       tarjeta.className = "tarjeta";
       tarjeta.setAttribute("tabindex", "0");
+      tarjeta.setAttribute("aria-label", `Proyecto ${titulo}`);
 
-      //Ponerles titulo
       const h2 = document.createElement("h2");
       h2.textContent = titulo;
+      h2.setAttribute("tabindex", "0");
       tarjeta.appendChild(h2);
 
-      // Crear contenedor tecnologías con sus respectivos iconos
       const tecnologiasCont = document.createElement("div");
       tecnologiasCont.classList.add("tecnologias");
+      tecnologiasCont.setAttribute("tabindex", "0");
+      tecnologiasCont.setAttribute("aria-label", `Tecnologías usadas en ${titulo}`);
       const tecnologias = tecnologiasText.split(",").map(t => t.trim());
       tecnologias.forEach(tech => {
         const icono = document.createElement("img");
@@ -40,23 +40,24 @@ fetch('proyectos.xml')
       });
       tarjeta.appendChild(tecnologiasCont);
 
-      // Descripción
-      const descripción = document.createElement("p");
-      descripción.textContent = descripcion;
-      tarjeta.appendChild(descripción);
+      const descripcionP = document.createElement("p");
+      descripcionP.textContent = descripcion;
+      descripcionP.setAttribute("tabindex", "0");
+      tarjeta.appendChild(descripcionP);
 
-      // Estado asignar el estado y sus clases para CSS 
-        const estadoSpan = document.createElement("span");
-        estadoSpan.classList.add("estado", estadoClase(estado));
-        estadoSpan.textContent = estado;
-        tarjeta.appendChild(estadoSpan);
+      const estadoSpan = document.createElement("span");
+      estadoSpan.classList.add("estado", estadoClase(estado));
+      estadoSpan.textContent = estado;
+      estadoSpan.setAttribute("tabindex", "0");
+      estadoSpan.setAttribute("aria-label", `Estado del proyecto: ${estado}`);
+      tarjeta.appendChild(estadoSpan);
 
-      // Liga a gitHub
       const enlace = document.createElement("a");
       enlace.href = link;
       enlace.target = "_blank";
       enlace.rel = "noopener";
       enlace.setAttribute("aria-label", `Ver ${titulo} en GitHub`);
+      enlace.setAttribute("tabindex", "0");
       enlace.textContent = "Ver en GitHub";
       tarjeta.appendChild(enlace);
 
@@ -65,7 +66,6 @@ fetch('proyectos.xml')
   })
   .catch(error => console.error("Error al cargar el XML:", error));
 
-// Función para obtener icono según tecnología
 function obtenerIconoTecnologia(nombre) {
   const tecnologias = {
     "Java": "img/java.png",
@@ -79,12 +79,11 @@ function obtenerIconoTecnologia(nombre) {
   return tecnologias[nombre] || "iconos/default.svg";
 }
 
-// Función para asignar clase según estado
 function estadoClase(estado) {
   switch (estado.toLowerCase()) {
     case "finalizado": return "completado";
     case "en proceso": return "en-proceso";
     case "prototipo": return "prototipo";
+    default: return "";
   }
 }
-
