@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Proyectos</title>
+  <link rel="stylesheet" href="styles/proyectos.css" />
+
+</head>
+<body>
+  <header>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" aria-keyshortcuts="Alt+I">Inicio</a></li>
+        <li><a href="proyectos.html" aria-keyshortcuts="Alt+P">Proyectos</a></li>
+        <li><a href="contacto.html" aria-current="page" aria-keyshortcuts="Alt+C">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main tabindex="-1" id="mainContent" aria-label="Contenido principal">
+    <div class="descripcion">
+      <h1>Mis Proyectos</h1>
+      <p>En esta sección encontrarás una selección de mis proyectos más destacados, donde podrás ver mi trabajo y habilidades en acción.</p>
+    </div>
+    <div class="container">
+      <section id="contenedor-proyectos" class="grid-proyectos" aria-label="Listado de proyectos">
+        <!-- Las tarjetas se cargarán dinámicamente desde Proyectos.xml -->
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p tabindex="0">&copy; 2025 Rodrigo Hernandez Holguín. Todos los derechos reservados.</p>
+  </footer>
+  <script defer src="js/cargarProyectos.js"></script>
+  <script src="js/atajos.js"></script>
+</body>
+</html>

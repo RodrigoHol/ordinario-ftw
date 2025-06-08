@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proyectos>
+  <proyecto>
+    <titulo>POSmart</titulo>
+    <tecnologias>Java, CSS, SQL</tecnologias>
+    <descripcion>Sistema de punto de ventas e inventario centrado en el usuario</descripcion>
+    <link>https://github.com/Hiramrr/POSmart</link>
+    <estado>Finalizado</estado>
+  </proyecto>
+  <proyecto>
+    <titulo>Challenge-amigo-secreto</titulo>
+    <tecnologias>HTML, CSS, JavaScript</tecnologias>
+    <descripcion>Proyecto para mi curso Alura Next Education. Permite agregar nombres a una lista de "amigos" y realizar un sorteo para seleccionar un ganador de forma aleatoria.</descripcion>
+    <link>https://github.com/RodrigoHol/challenge-amigo-secreto</link>
+    <estado>En Proceso</estado>
+  </proyecto>
+  <proyecto>
+    <titulo>Portafolio-web</titulo>
+    <tecnologias>HTML, CSS, JavaScript</tecnologias>
+    <descripcion>Proyecto para mi curso Alura Next Education. Un portafolio web sencillo.</descripcion>
+    <link>https://github.com/RodrigoHol/Portafolio-web</link>
+    <estado>Finalizado</estado>
+  </proyecto>
+  <proyecto>
+    <titulo>Proyecto-BD</titulo>
+    <tecnologias>Java, Oracle SQL, MongoDB</tecnologias>
+    <descripcion>Punto de venta centrado en llevar un registro de ventas e inventario con bases de datos relaciones y no relacionales</descripcion>
+    <link>https://github.com/AlfredoAta21/Proyecto-BD</link>
+    <estado>Prototipo</estado>
+  </proyecto>
+  <proyecto>
+    <titulo>ProcesadorTextoWeb</titulo>
+    <tecnologias>HTML, CSS, JavaScript</tecnologias>
+    <descripcion>Procesador de texto en la web que te permite exportar documentos</descripcion>
+    <link>https://github.com/RodrigoHol/ProcesadorTextoWeb</link>
+    <estado>Finalizado</estado>
+  </proyecto>
+  <proyecto>
+    <titulo>EncriptadorDeTexto</titulo>
+    <tecnologias>HTML, CSS, JavaScript</tecnologias>
+    <descripcion>Permite encriptar un mensaje y desencriptarlo</descripcion>
+    <link>https://github.com/RodrigoHol/ProcesadorTextoWeb</link>
+    <estado>En Proceso</estado>
+  </proyecto>
+</proyectos>
