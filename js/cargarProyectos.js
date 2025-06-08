@@ -72,7 +72,7 @@ function obtenerIconoTecnologia(nombre) {
     "CSS": "img/css.png",
     "SQL": "img/mysql.png",
     "HTML": "img/html.png",
-    "JavaScript": "img/javascript.png",
+    "JavaScript": "img/javaScript.png",
     "Oracle SQL": "img/sql.png",
     "MongoDB": "img/mongo.png",
   };
